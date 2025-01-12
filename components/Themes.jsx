@@ -27,7 +27,7 @@ const Themes = () => {
                 <div className='flex gap-4'>
                     <Image src={"/ospc.jpg"} height={100} width={100} alt="OSPC Logo" className='logos'/>
                     <Image src={"/acm.png"} height={100} width={100} alt="ACM LOGO" className='logos ieeewie'/>
-                    <Image src={"/ieeewie.jpg"} height={100} width={100} alt="IEEEWIE Logo" className='logos'/>
+                    <Image src={"/ieeewielogo.jpg"} height={100} width={100} alt="IEEEWIE Logo" className='logos'/>
                 </div>
             </div>
         </div>
