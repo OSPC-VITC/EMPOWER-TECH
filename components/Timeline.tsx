@@ -1,7 +1,5 @@
-"use client";
-
+import React, { useState, useRef, useEffect } from "react";
 import { Clock, Code2, Flag, Lightbulb, Presentation, Rocket, Trophy, Users } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { TimelineEvent } from "./TimelineEvent";
 
@@ -133,7 +131,7 @@ export function Timeline() {
       {/* Timeline Container */}
       <div
         ref={scrollRef}
-        className="overflow-x-auto hide-scrollbar relative py-12"
+        className="overflow-x-auto relative py-12 hide-scrollbar"
       >
         {/* Timeline Line */}
         <div className="absolute left-0 right-0 h-1 bg-gradient-to-r from-blue-500/50 via-purple-500/50 to-pink-500/50 top-1/2 -translate-y-1/2" />
@@ -146,7 +144,6 @@ export function Timeline() {
               {...event}
               index={index}
               isActive={activeIndex === index}
-              ref={(el) => (eventRefs.current[index] = el)}
               onClick={() => setActiveIndex(index)}
             />
           ))}
