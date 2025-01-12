@@ -21,7 +21,7 @@ const Hero = () => {
           height={2000}
           width={2000}
         />
-        <Link className="homebtn" href={"https://unstop.com/p/empowertech-vit-chennai-1328559"}>
+        <Link className="homebtn hover:bg-fuchsia-700 hover:text-white transition duration-300 ease-in-out transform hover:scale-105" href={"https://unstop.com/p/empowertech-vit-chennai-1328559"}>
           Register Now
         </Link>
         <div className="flex flex-col z-10">
