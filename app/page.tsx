@@ -6,7 +6,7 @@ import Themes from "@/components/Themes";
 import Timeline from "@/components/TimelineComponent";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-
+import Faq from "@/components/Faq";
 const Page = () => {
   // Create refs for each section
   const refs = {
@@ -14,6 +14,7 @@ const Page = () => {
     about: useRef(null),
     timeline: useRef(null),
     contact: useRef(null),
+    faq: useRef(null),
   };
 
   return (
@@ -28,6 +29,9 @@ const Page = () => {
       </div>
       <div ref={refs.timeline} id="timeline" className="section">
         <Timeline />
+      </div>
+      <div ref={refs.faq} id="faq" className="section">
+        <Faq />
       </div>
       <div ref={refs.contact} id="contact" className="section">
         <Contact />
