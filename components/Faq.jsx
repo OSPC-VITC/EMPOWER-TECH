@@ -6,11 +6,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Search } from "lucide-react";
 
 const Faq = () => {
-  const [searchTerm, setSearchTerm] = React.useState('');
-  
   const faqData = [
     {
       question: "What is Empower-tech?",
@@ -38,48 +35,41 @@ const Faq = () => {
     }
   ];
 
-  const filteredFaqs = faqData.filter(faq =>
-    faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-return (
-    <section className="flex flex-col items-center justify-center min-h-screen">
-        <div className="max-w-4xl mx-auto space-y-8">
-            <Card className="themebox tb22">
-                <CardHeader className="text-center pb-8">
-                    <CardTitle className="themeboxtitle themeboxtitle2 tb2">
-                        Frequently Asked Questions
-                    </CardTitle>
-                </CardHeader>
-                <CardContent>
-                    {filteredFaqs.length === 0 ? (
-                        <div className="text-center py-8 themebox tb22">
-                            No matching questions found. Try a different search term.
-                        </div>
-                    ) : (
-                        <Accordion type="single" collapsible className="space-y-4">
-                            {filteredFaqs.map((faq, index) => (
-                                <AccordionItem
-                                    key={index}
-                                    value={`item-${index}`}
-                                    className="themebox tb22 rounded-lg px-4"
-                                >
-                                    <AccordionTrigger className="text-left text-white py-4 text-lg font-medium">
-                                        {faq.question}
-                                    </AccordionTrigger>
-                                    <AccordionContent className="pb-4 text-white">
-                                        {faq.answer}
-                                    </AccordionContent>
-                                </AccordionItem>
-                            ))}
-                        </Accordion>
-                    )}
-                </CardContent>
-            </Card>
-        </div>
+  return (
+    <section className="flex flex-col items-center justify-center min-h-screen p-4">
+      <div className="w-full max-w-4xl mx-auto">
+        <Card className="themebox tb22 shadow-lg">
+          <CardHeader className="text-center pb-8">
+            <CardTitle className="themeboxtitle themeboxtitle2 tb2 text-3xl font-bold">
+              Frequently Asked Questions
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="px-4 md:px-6">
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqData.map((faq, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`item-${index}`}
+                  className="themebox tb22 rounded-lg transition-all duration-300 border hover:shadow-lg"
+                >
+                  <AccordionTrigger
+                    className="text-left text-white py-4 px-6 text-lg font-medium hover:text-opacity-90 rounded-lg transition-colors duration-300"
+                  >
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent
+                    className="px-6 pb-4 text-white text-opacity-90 rounded-b-lg"
+                  >
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </CardContent>
+        </Card>
+      </div>
     </section>
-);
+  );
 };
 
 export default Faq;

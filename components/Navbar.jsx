@@ -7,6 +7,7 @@ const menu = [
   { name: "Home", refName: "home" },
   { name: "About", refName: "about" },
   { name: "Timeline", refName: "timeline" },
+  { name: "FAQ", refName: "faq" },
   { name: "Contact", refName: "contact" },
 ];
 
