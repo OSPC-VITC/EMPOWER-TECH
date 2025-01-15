@@ -34,6 +34,7 @@ These themes aim to address key societal issues through technological innovation
 - **Dr. Jayaram**
 - **Dr. Vydeki**
 - **Dr. Suganya R**
+- **Dr. Jagannath M**
 
 ## Why Participate?
 
