@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { CheckCheck, ChefHat, Clock, Code2, CupSoda, Flag, ForkKnife, Hourglass, Lightbulb, PauseCircle, Presentation, Rocket, Trophy, Users } from "lucide-react";
+import { CheckCheck, ChefHat, Clock, Code2, CupSoda, Flag, ForkKnife, Hourglass, Lightbulb, PauseCircle, Presentation, Rocket, Trophy } from "lucide-react";
 import { motion } from "framer-motion";
 import { TimelineEvent } from "./TimelineEvent";
 
