@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Clock, Code2, Flag, Lightbulb, Presentation, Rocket, Trophy, Users } from "lucide-react";
+import { CheckCheck, ChefHat, Clock, Code2, CupSoda, Flag, ForkKnife, Hourglass, Lightbulb, PauseCircle, Presentation, Rocket, Trophy, Users } from "lucide-react";
 import { motion } from "framer-motion";
 import { TimelineEvent } from "./TimelineEvent";
 
@@ -13,52 +13,87 @@ const timelineData = [
   },
   {
     title: "Opening Ceremony",
-    time: "Day 1 - 10:00 AM",
-    description: "Welcome address and theme announcement",
+    time: "Day 1 - 3:00 PM",
+    description: "Welcome address , theme announcement and guest speech",
     icon: Presentation,
     color: "bg-purple-500",
   },
   {
-    title: "Team Formation",
-    time: "Day 1 - 11:00 AM",
-    description: "Find your teammates and brainstorm ideas",
-    icon: Users,
+    title: "Hacking Begins",
+    time: "Day 1 - 4:00 PM",
+    description: "Start working on your innovative projects",
+    icon: Rocket,
     color: "bg-green-500",
   },
   {
-    title: "Hacking Begins",
-    time: "Day 1 - 12:00 PM",
-    description: "Start working on your innovative projects",
-    icon: Code2,
+    title: "Dinner",
+    time: "Day 1 - 8:30 PM - 9:30 PM",
+    description: "Fuel your passion and keep the momentum alive",
+    icon: ForkKnife,
     color: "bg-red-500",
   },
   {
-    title: "Ideation Workshop",
-    time: "Day 1 - 2:00 PM",
-    description: "Workshop on brainstorming and planning",
+    title: "Overnight work",
+    time: "Day 1 - 9:30 PM - 12:00 AM",
+    description: "All night coding in progress and keep the momentum alive through the night",
     icon: Lightbulb,
     color: "bg-yellow-500",
   },
   {
-    title: "Midnight Milestone",
-    time: "Day 2 - 12:00 AM",
-    description: "Late night check-in and progress sharing",
+    title: "Overnight Hacking",
+    time: "Day 2 - 12:00 AM - 8:00 AM",
+    description: "Where night owls craft brilliance in the stillness of the night",
     icon: Clock,
     color: "bg-indigo-500",
   },
   {
-    title: "Project Submissions",
-    time: "Day 2 - 10:00 AM",
-    description: "Submit your projects for judging",
-    icon: Rocket,
+    title: "Breakfast",
+    time: "Day 2 - 8:00 AM - 9:00 AM",
+    description: "Refuel your energy for the final sprint ahead",
+    icon: CupSoda,
     color: "bg-pink-500",
   },
   {
-    title: "Judging & Awards",
-    time: "Day 2 - 2:00 PM",
-    description: "Project presentations and winners",
-    icon: Trophy,
+    title: "Hackathon continues",
+    time: "Day 2 - 9:00 AM - 12:00 PM",
+    description: "Push the boundaries of innovation as the clock ticks",
+    icon: Code2,
     color: "bg-orange-500",
+  },
+  {
+    title: "Lunch",
+    time: "Day 2 - 12:00 PM - 1:00 PM",
+    description: "A mid-day pause to recharge for the final session",
+    icon: ChefHat,
+    color: "bg-purple-500"
+  },
+  {
+    title: "Hackathon Ends",
+    time: "Day 2 - 1:00 PM - 3:00 PM",
+    description: "The last dance- bring your vision to life with every line of code",
+    icon: Hourglass,
+    color: "bg-green-500"
+  },
+  {
+    title: "Evaluation and Pitching",
+    time: "Day 2 - 3:00 PM - 4:00 PM",
+    description: "Showcase your brilliance and make your pitch count",
+    icon: CheckCheck,
+    color: "bg-red-500"
+  },
+  {
+    title: "Break",
+    time: "Day 2 - 4:00 PM - 4:30 PM",
+    description: "A brief pause to catch your breath before the grand reveal",
+    icon: PauseCircle,
+    color: "bg-yellow-500"
+  },
+  {
+    title: "Awards Ceremony",
+    time: "Day 2 - 4:30 PM - 5:30 PM",
+    description: "Celebrating triumphs and bidding farewell to an unforgettable journey",
+    icon: Trophy,
+    color: "bg-indigo-500"
   },
 ];
 
@@ -134,7 +169,8 @@ export function Timeline() {
         className="overflow-x-auto relative py-12 hide-scrollbar"
       >
         {/* Timeline Line */}
-        <div className="absolute left-0 right-0 h-1 bg-gradient-to-r from-blue-500/50 via-purple-500/50 to-pink-500/50 top-1/2 -translate-y-1/2" />
+        <div className="absolute h-1 bg-gradient-to-r from-blue-500/50 via-purple-500/50 to-pink-500/50 top-1/2 -translate-y-1/2"
+        style={{ width: `${timelineData.length * 320}px` }} />
 
         {/* Timeline Events */}
         <div className="flex gap-8 px-16">
