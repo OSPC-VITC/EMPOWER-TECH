@@ -31,7 +31,7 @@ const Contact = () => {
             <User className="w-5 h-5" /> Dr.Jayaram
           </p>
           <p className="flex items-center justify-center gap-2 mb-2">
-            <User className="w-5 h-5" /> Dr.Vydeki
+            <User className="w-5 h-5" /> Dr.Vydeki D
           </p>
           <p className="flex items-center justify-center gap-2 mb-2">
             <User className="w-5 h-5" /> Dr.Suganya R
