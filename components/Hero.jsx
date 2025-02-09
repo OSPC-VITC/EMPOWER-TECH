@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="flex flex-col items-center">
           <h1 className="z-10 herotitle">EMPOWER-TECH</h1>
           <span className="herodesc flex items-center justify-center flex-wrap gap-1" style={{fontSize:24}}><span>Innovate for Social Equality</span><span> & </span><span>Empowerment</span></span>
-          <span className="z-10 herodesc pt-4">24 Hour Hackathon</span>
+          <span className="z-10 herodesc pt-4">24-Hour Hackathon</span>
         </div>
         <FlickeringGrid
           className="z-0 absolute inset-0 [mask-image:radial-gradient(450px_circle_at_center,white,transparent)]"
