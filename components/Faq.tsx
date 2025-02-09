@@ -7,8 +7,13 @@ import {
 } from "@/components/ui/accordion";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
-const Faq = () => {
-  const faqData = [
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+const Faq: React.FC = () => {
+  const faqData: FaqItem[] = [
     {
       question: "What is Empower-tech?",
       answer: "Empower-tech is a Social Well-Being Hackathon that aims to bring together innovators, technologists, and changemakers to develop solutions that prioritize social equality, justice, empowerment, and sustainable development."
@@ -36,31 +41,40 @@ const Faq = () => {
   ];
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen p-4">
+    <section className="flex flex-col items-center justify-center min-h-screen p-4 bg-opacity-90">
       <div className="w-full max-w-4xl mx-auto">
-        <Card className="themebox tb22 shadow-lg">
-          <CardHeader className="text-center pb-8">
-            <CardTitle className="themeboxtitle themeboxtitle2 tb2 text-3xl font-bold">
+        <Card className="themebox tb22 shadow-xl backdrop-blur-sm">
+          <CardHeader className="text-center pb-6">
+            <CardTitle className="themeboxtitle themeboxtitle2 tb2 text-4xl font-bold animate-fade-in">
               Frequently Asked Questions
             </CardTitle>
           </CardHeader>
-          <CardContent className="px-4 md:px-6">
-            <Accordion type="single" collapsible className="space-y-4">
+          
+          <CardContent className="px-4 md:px-8">
+            <Accordion 
+              type="single" 
+              collapsible 
+              className="space-y-4"
+            >
               {faqData.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="themebox tb22 rounded-lg transition-all duration-300 border hover:shadow-lg"
+                  className="themebox tb22 rounded-xl transition-all duration-300 border-2 border-opacity-20 hover:border-opacity-40 group"
                 >
                   <AccordionTrigger
-                    className="text-left text-white py-4 px-6 text-lg font-medium hover:text-opacity-90 rounded-lg transition-colors duration-300"
+                    className="text-left text-white py-5 px-6 text-lg font-medium rounded-t-xl transition-all duration-300 group-hover:bg-opacity-10"
                   >
-                    {faq.question}
+                    <div className="flex items-center gap-3">
+                      <span className="flex-1">{faq.question}</span>
+                    </div>
                   </AccordionTrigger>
                   <AccordionContent
-                    className="px-6 pb-4 text-white text-opacity-90 rounded-b-lg"
+                    className="px-6 py-4 text-white text-opacity-90 rounded-b-xl prose-sm md:prose-base"
                   >
-                    {faq.answer}
+                    <div className="leading-relaxed transition-opacity duration-200">
+                      {faq.answer}
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
               ))}

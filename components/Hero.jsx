@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col items-center justify-center hero min-h-screen relative rounded-lg w-full bg-background bg-black overflow-hidden gap-10 relative">
+    <section className="flex flex-col items-center justify-center hero min-h-screen  rounded-lg w-full bg-background bg-black overflow-hidden gap-10 relative">
         <div className="flex flex-col items-center">
           <h1 className="z-10 herotitle">EMPOWER-TECH</h1>
           <span className="herodesc flex items-center justify-center flex-wrap gap-1" style={{fontSize:24}}><span>Innovate for Social Equality</span><span> & </span><span>Empowerment</span></span>
@@ -21,7 +21,7 @@ const Hero = () => {
           height={2000}
           width={2000}
         />
-        <Link className="homebtn hover:bg-fuchsia-700 hover:text-white transition duration-300 ease-in-out transform hover:scale-105" href={"https://unstop.com/p/empowertech-vit-chennai-1328559"}>
+        <Link className="homebtn hover:bg-fuchsia-700 hover:text-white transition duration-300 ease-in-out transform hover:scale-105" href={"https://forms.gle/YSZRG6DMFbnptPUEA"}>
           Register Now
         </Link>
         <div className="flex flex-col z-10">

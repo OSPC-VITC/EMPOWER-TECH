@@ -1,7 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
 import { AlignRight, X } from "lucide-react";
-import "./NavbarCSS.css";
 
 const menu = [
   { name: "Home", refName: "home" },
