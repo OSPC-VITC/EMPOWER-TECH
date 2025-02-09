@@ -25,7 +25,7 @@ const Navbar = ({ refs }) => {
   };
 
   return (
-    <div className="navbar shift">
+    <nav className="navbar shift">
       <span className="logo">
         <span className="logoe">E</span>
         <span className="text-pink-400">T</span>
@@ -65,7 +65,7 @@ const Navbar = ({ refs }) => {
           </ul>
         </div>
       )}
-    </div>
+    </nav>
   );
 };
 
